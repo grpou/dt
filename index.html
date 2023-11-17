@@ -4,22 +4,317 @@
 <head>
   <title>Calculateur de brisage Dofus Touch</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="barre">
-    <input type="text" id="items" placeholder="Item">
-    <div id="suggestions" class="suggestions"></div>
-    <button>→</button>
+  <div class="container">
+
+    <div class="number_of_items" id="number_of_items">items</div>
+
+    <input class="search_item" type="search_item" id="items" placeholder="Rechercher un objet">
+
+    <div class="container_itemtype">
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Amulette" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Amulette">Amulette</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Anneau" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Anneau">Anneau</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Bottes" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Bottes">Bottes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Bouclier" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Bouclier">Bouclier</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Cape" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Cape">Cape</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Ceinture" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Ceinture">Ceinture</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Chapeau" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Chapeau">Chapeau</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Dofus" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Dofus">Dofus</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Trophée" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Trophée">Trophée</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Arc" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Arc">Arc</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Baguette" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Baguette">Baguette</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Épée" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Épée">Épée</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Faux" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Faux">Faux</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Hache" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Hache">Hache</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Dagues" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Dagues">Dagues</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Bâton" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Bâton">Bâton</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Marteau" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Marteau">Marteau</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Pelle" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Pelle">Pelle</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="Pioche" value="option1" checked="True" aria-label="...">
+        <label class="form-check-label" for="Pioche">Pioche</label>
+      </div>
+    </div>
+
+    <div class="container_runes">
+      <label class="label_runes">Runes</label>
+      <div class="container_rune" id="gapa">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78055.png" name="gapa" class="btnrune"/>
+        <label class="label_rune">Ga Pa</label>
+      </div>
+      <div class="container_rune" id="gapme">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78056.png" name="gapme" class="btnrune"/>
+        <label class="label_rune">Ga Pme</label>
+      </div>
+      <div class="container_rune" id="po">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78018.png" name="po" class="btnrune"/>
+        <label class="label_rune">Po</label>
+      </div>
+      <div class="container_rune" id="invo">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78019.png" name="invo" class="btnrune"/>
+        <label class="label_rune">Invo</label>
+      </div>
+      <div class="container_rune" id="so">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78013.png" name="so" class="btnrune"/>
+        <label class="label_rune">Soin</label>
+      </div>
+      <div class="container_rune" id="cri">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78014.png" name="cri" class="btnrune"/>
+        <label class="label_rune">Critique</label>
+      </div>
+      <div class="container_rune" id="doneutre">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78069.png" name="doneutre" class="btnrune"/>
+        <label class="label_rune">Do Neutre</label>
+      </div>
+      <div class="container_rune" id="doterre">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78065.png" name="doterre" class="btnrune"/>
+        <label class="label_rune">Do Terre</label>
+      </div>
+      <div class="container_rune" id="dofeu">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78063.png" name="dofeu" class="btnrune"/>
+        <label class="label_rune">Do Feu</label>
+      </div>
+      <div class="container_rune" id="doeau">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78061.png" name="doeau" class="btnrune"/>
+        <label class="label_rune">Do Eau</label>
+      </div>
+      <div class="container_rune" id="doair">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78067.png" name="doair" class="btnrune"/>
+        <label class="label_rune">Do Air</label>
+      </div>
+      <div class="container_rune" id="dopou">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78081.png" name="dopou" class="btnrune"/>
+        <label class="label_rune">Do Pou</label>
+      </div>
+    </div>
+
+    <div class="container_runes">
+      <label class="label_runes">Runes</label>
+      <div class="container_rune" id="docri">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78073.png" name="docri" class="btnrune"/>
+        <label class="label_rune">Do Cri</label>
+      </div>
+      <div class="container_rune" id="do">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78015.png" name="do" class="btnrune"/>
+        <label class="label_rune">Do</label>
+      </div>
+      <div class="container_rune" id="tac">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78077.png" name="tac" class="btnrune"/>
+        <label class="label_rune">Tacle</label>
+      </div>
+      <div class="container_rune" id="fui">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78076.png" name="fui" class="btnrune"/>
+        <label class="label_rune">Fuite</label>
+      </div>
+      <div class="container_rune" id="pod">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78020.png" name="pod" class="btnrune"/>
+        <label class="label_rune">Pod</label>
+      </div>
+      <div class="container_rune" id="repa">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78083.png" name="repa" class="btnrune"/>
+        <label class="label_rune">Ré pa</label>
+      </div>
+      <div class="container_rune" id="repme">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78085.png" name="repme" class="btnrune"/>
+        <label class="label_rune">Ré pme</label>
+      </div>
+      <div class="container_rune" id="retpa">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78087.png" name="retpa" class="btnrune"/>
+        <label class="label_rune">Ret Pa</label>
+      </div>
+      <div class="container_rune" id="retpme">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78089.png" name="retpme" class="btnrune"/>
+        <label class="label_rune">Ret Pme</label>
+      </div>
+      <div class="container_rune" id="repou">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78079.png" name="repou" class="btnrune"/>
+        <label class="label_rune">Ré Pou</label>
+      </div>
+      <div class="container_rune" id="recri">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78071.png" name="recri" class="btnrune"/>
+        <label class="label_rune">Ré Cri</label>
+      </div>
+    </div>
+
+    <div class="container_runes">
+      <label class="label_runes">Runes</label>
+      <div class="container_rune" id="reperneutre">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78058.png" name="reperneutre" class="btnrune"/>
+        <label class="label_rune">Ré per Neutre</label>
+      </div>
+      <div class="container_rune" id="reperterre">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78035.png" name="reperterre" class="btnrune"/>
+        <label class="label_rune">Ré per Terre</label>
+      </div>
+      <div class="container_rune" id="reperfeu">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78029.png" name="reperfeu" class="btnrune"/>
+        <label class="label_rune">Ré per Feu</label>
+      </div>
+      <div class="container_rune" id="repereau">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78031.png" name="repereau" class="btnrune"/>
+        <label class="label_rune">Ré per Eau</label>
+      </div>
+      <div class="container_rune" id="reperair">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78033.png" name="reperair" class="btnrune"/>
+        <label class="label_rune">Ré per Air</label>
+      </div>
+      <div class="container_rune" id="reneutre">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78057.png" name="reneutre" class="btnrune"/>
+        <label class="label_rune">Ré Neutre</label>
+      </div>
+      <div class="container_rune" id="reterre">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78034.png" name="reterre" class="btnrune"/>
+        <label class="label_rune">Ré Terre</label>
+      </div>
+      <div class="container_rune" id="refeu" >
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78028.png" name="refeu" class="btnrune"/>
+        <label class="label_rune">Ré Feu</label>
+      </div>
+      <div class="container_rune" id="reeau" >
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78030.png" name="reeau" class="btnrune"/>
+        <label class="label_rune">Ré Eau</label>
+      </div>
+      <div class="container_rune" id="reair">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78032.png" name="reair" class="btnrune"/>
+        <label class="label_rune">Ré Air</label>
+      </div>
+      <div class="container_rune" id="pui" id="reair">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78016.png" name="pui" class="btnrune"/>
+        <label class="label_rune">Pui</label>
+      </div>
+    </div>
+
+    <div class="container_runes">
+      <label class="label_runes">Runes</label>
+      <div class="container_rune" id="vi">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78052.png" name="vi" class="btnrune"/>
+        <label class="label_rune">Vi</label>
+      </div>
+      <div class="container_rune" id="fo">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78043.png" name="fo" class="btnrune"/>
+        <label class="label_rune">Fo</label>
+      </div>
+      <div class="container_rune" id="ine">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78037.png" name="ine" class="btnrune"/>
+        <label class="label_rune">Ine</label>
+      </div>
+      <div class="container_rune" id="cha">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78040.png" name="cha" class="btnrune"/>
+        <label class="label_rune">Cha</label>
+      </div>
+      <div class="container_rune" id="age">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78046.png" name="age" class="btnrune"/>
+        <label class="label_rune">Age</label>
+      </div>
+      <div class="container_rune" id="sa">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78049.png" name="sa" class="btnrune"/>
+        <label class="label_rune">Sa</label>
+      </div>
+      <div class="container_rune" id="ini">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78025.png" name="ini" class="btnrune"/>
+        <label class="label_rune">Ini</label>
+      </div>
+      <div class="container_rune" id="prospe">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/172001.png" name="prospe" class="btnrune"/>
+        <label class="label_rune">Prospe</label>
+      </div>
+      <div class="container_rune" id="dechasse">
+        <input type="image" src="https://static.ankama.com/dofus-touch/www/game/items/200/78059.png" name="dechasse" class="btnrune"/>
+        <label class="label_rune">Chasse</label>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th> <!--Image-->
+          <th scope="col">Nom</th>
+          <th scope="col">Analyse</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>Thornton</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   
-  
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
